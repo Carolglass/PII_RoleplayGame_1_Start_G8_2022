@@ -2,3 +2,4 @@
 [Bb]in/
 .vscode/
 .vs/RolePlayI/v16/TestStore/0/000.testlog
+*.testlog
