@@ -10,7 +10,6 @@ namespace Library
 
     public class Mago
     {
-        private List<Items> Itemlist = new List<Items> ();
         public Mago(string nickname, int lives, int damage, string power)
         {
             this.Nickname = nickname;
