@@ -4,28 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Elfo
+namespace Library
 {
     using System;
 
-    public class Character
+    public class Elfo
     {
-        public Character(string nickname, int lives, int damage, string power)
+
+
+        
+        private string nombre;
+        private int vida;
+        private int danio;
+
+        public Elfo(string nombre, int vida, int danio)
         {
-            this.Nickname = nickname;
-            this.Life = lives;
-            this.Damage = damage;
-            this.Power = power;
+            this.Nombre = nombre;
+            this.Vida = vida;
+            this.Danio = danio;
+        }
+            
+        public string Nombre { get; }
+
+        public int Vida { get; private set; }
+
+        public int Danio { get; }
+
+        public void RecibirDanio(int dañoRecibido)
+        {
+            this.vida = this.vida - dañoRecibido;
         }
 
-        public string Nickname { get; }
 
-        public int Life { get; private set; }
-
-        public int Damage { get; }
-
-        public string Power { get; }
-
+        public bool Vido()
+        {
+            return this.vida> 0;
+        }
+        /*
         public void Attack(Character enemy)
         {
             enemy.Life = enemy.Life - this.Damage;
@@ -35,5 +50,6 @@ namespace Elfo
         {
             return this.Life > 0;
         }
+        */
     }
 }
