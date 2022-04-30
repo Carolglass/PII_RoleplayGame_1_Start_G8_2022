@@ -10,6 +10,10 @@ namespace Library
 
     public class Mago
     {
+        private string nombre;
+        private int vida;
+        private int danio;
+
         public Mago(int id, string nombre, int vida, int danio)
         {
             this.Id = id;
@@ -22,7 +26,17 @@ namespace Library
 
         public int Vida { get; private set; }
 
-        public int Danio { get; set; }
+        public int Danio
+        {
+            get
+            {
+                return this.danio;
+            }
+            set
+            {
+                this.danio = value;
+            }
+        }
 
         public bool Healthy()
         {

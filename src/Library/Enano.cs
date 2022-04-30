@@ -29,7 +29,17 @@ namespace Library
 
         public int Vida { get; private set; }
 
-        public int Danio { get; }
+        public int Danio
+        {
+            get
+            {
+                return this.danio;
+            }
+            set
+            {
+                this.danio = value;
+            }
+        }
 
         public void RecibirDanio(int daniorecibido)
         {
