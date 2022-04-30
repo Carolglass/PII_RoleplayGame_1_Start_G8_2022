@@ -16,12 +16,15 @@ namespace Library
         private int danio;
 
         public int vidaTotal;
-        public Elfo(string nombre, int vida, int danio)
+        public Elfo(int id, string nombre, int vida, int danio)
         {
+            this.Id = id;
             this.Nombre = nombre;
             this.Vida = vida;
             this.Danio = danio;
         }
+
+        public int Id { get; }
 
         public int Vida
         {
