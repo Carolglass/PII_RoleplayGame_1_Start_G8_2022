@@ -15,22 +15,21 @@ namespace Library
         private int vida;
         private int danio;
 
-
-        public Enano (string nombre, int vida, int danio)
+        public Enano (int id, string nombre, int vida, int danio)
         {
+            this.Id = id;
             this.Nombre = nombre;
             this.Vida = vida;
             this.Danio = danio;
-            
         }
+
+        public int Id { get; }
 
         public string Nombre { get; }
 
         public int Vida { get; private set; }
 
         public int Danio { get; }
-
-
 
         public void RecibirDanio(int daniorecibido)
         {

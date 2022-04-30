@@ -22,14 +22,16 @@ namespace Library
 
         public int Vida { get; private set; }
 
-        public int Danio { get; }
+        public int Danio { get; set; }
 
         public bool Healthy()
         {
             return this.Vida > 0;
-
         }
 
-	}
-    
+        public void AumentarVida(int VidaAumentada)
+        {
+            this.Vida += VidaAumentada;
+        }
+    }
 }

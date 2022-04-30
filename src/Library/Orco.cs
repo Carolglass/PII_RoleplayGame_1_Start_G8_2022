@@ -6,29 +6,27 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-<<<<<<< Updated upstream
-    
-    internal class Orco
+    public class Orco
     {
         private string nombre;
         private int vida;
         private int danio;
 
-
-        public Orco(string nombre, int vida, int danio)
+        public Orco(int id, string nombre, int vida, int danio)
         {
+            this.Id = id;
             this.Nombre = nombre;
             this.Vida = vida;
             this.Danio = danio;
-
         }
+
+        public int Id { get; }
 
         public string Nombre { get; }
 
         public int Vida { get; private set; }
 
         public int Danio { get; }
-
 
 
         public void RecibirDanio(int daniorecibido)
@@ -40,9 +38,4 @@ namespace Library
         {
             return this.vida > 0;
         }
-=======
-    internal class Orco
-    {
->>>>>>> Stashed changes
-    }
 }
