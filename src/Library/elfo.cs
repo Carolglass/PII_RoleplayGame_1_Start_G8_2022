@@ -11,8 +11,6 @@ namespace Library
     public class Elfo
     {
 
-
-
         private string nombre;
         private int vida;
         private int danio;
