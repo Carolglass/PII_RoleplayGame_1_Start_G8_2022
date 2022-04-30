@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace Library.Items
 {
-    public class Palito
+    internal class Escudo
     {
         private string nombre;
         private int valorAtaque;
         private static List<int> charactersId = new List<int>();
 
         public String Nombre { get; private set; }
-        public int ValorAtaque { get; private set; }
+        public int ValorDefensa { get; private set; }
 
-        public Palito(string nombre, int valorAtaque)
+        public Escudo(string nombre, int valorAtaque)
         {
             Nombre = this.nombre;
-            ValorAtaque = this.valorAtaque;
+            ValorDefensa = this.ValorDefensa;
         }
         public static void CharactersId(int identificador)
         {
             charactersId.Add(identificador);
-
-
-
         }
     }
+}
+namespace Library.Items
+{
+
 }
