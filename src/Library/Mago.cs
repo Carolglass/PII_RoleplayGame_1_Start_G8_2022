@@ -27,6 +27,9 @@ namespace Library
         public bool Healthy()
         {
             return this.Vida > 0;
+
         }
-    }
+
+	}
+    
 }
