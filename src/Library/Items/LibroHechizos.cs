@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Items
 {
-    public class LibroHechizos 
+    public class LibroHechizos
     {
         private string nombre;
 
@@ -15,12 +15,12 @@ namespace Library.Items
         private static List<int> hechizosId = new List<int>();
 
         public String Nombre { get; private set; }
-       
+
 
         public LibroHechizos(string nombre, int valorAtaque)
         {
-            Nombre = this.nombre;
-     
+            Nombre = this.nombre;//hola
+
         }
         public static void CharactersId(int identificador)
         {
