@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Items
 {
-    internal class Casco
+    public class Casco
     {
     }
 }

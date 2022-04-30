@@ -11,10 +11,8 @@ namespace Library.Items
         private string nombre;
         private int valorAtaque;
         private static List<int> charactersId = new List<int>();
-
         public String Nombre { get; private set; }
         public int ValorDefensa { get; private set; }
-
         public Escudo(string nombre, int valorAtaque)
         {
             Nombre = this.nombre;
@@ -25,8 +23,4 @@ namespace Library.Items
             charactersId.Add(identificador);
         }
     }
-}
-namespace Library.Items
-{
-
 }
