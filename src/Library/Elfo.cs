@@ -38,7 +38,17 @@ namespace Library
             }
         }
 
-        public int Danio { get; }
+        public int Danio
+        {
+            get
+            {
+                return this.danio;
+            }
+            set
+            {
+                this.danio = value;
+            }
+        }
 
         //Legolas recibe daño del sistema meritocratico y burocratico actual
         public void RecibirDanio(int dañoRecibido)
@@ -51,11 +61,11 @@ namespace Library
         {
             get
             {
-                return this.Nombre;
+                return this.nombre;
             }
             set 
             {
-                this.Nombre = value;
+                this.nombre = value;
             }
         }
 
