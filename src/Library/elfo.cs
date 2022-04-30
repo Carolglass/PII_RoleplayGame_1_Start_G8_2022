@@ -20,12 +20,10 @@ namespace Library
         public int vidaTotal;
         public Elfo(string nombre, int vida, int danio)
         {
-            this.Nombre = nombre;
+            this.DefinirNombre = nombre;
             this.Vida = vida;
             this.Danio = danio;
         }
-
-        public string Nombre { get; }
 
         public int Vida
         {
@@ -48,13 +46,17 @@ namespace Library
         }
 
         //legolas se percibe como una planta y quiere cambiarse el nombre
-        public string DefinirNombre(string nombresito)
+        public string DefinirNombre
         {
-            this.nombre = nombresito;
+            set
+            {
+                this.nombre = value;
+            }
+           
         }
 
         //curamos a Legolas del daño que le hizo ella :c
-        public bool Curar()
+        public void Curar()
         {
             this.vida = this.vidaTotal;
         }
