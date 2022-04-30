@@ -9,14 +9,15 @@ namespace Library.Items
     internal class Escudo
     {
         private string nombre;
-        private int valorAtaque;
+        private int valorDefensa;
         private static List<int> charactersId = new List<int>();
         public String Nombre { get; private set; }
         public int ValorDefensa { get; private set; }
+
         public Escudo(string nombre, int valorAtaque)
         {
-            Nombre = this.nombre;
-            ValorDefensa = this.ValorDefensa;
+            this.Nombre = nombre;
+            this.ValorDefensa = valorDefensa;
         }
         public static void CharactersId(int identificador)
         {
