@@ -1,4 +1,6 @@
 ﻿using System;
+using Library;
+using Library.Items;
 
 namespace Program
 {
@@ -6,8 +8,11 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-            Console.WriteLine("Bye World");
+            Mago Tony = new Mago(0,"Tony", 100, 10);
+            Hacha hacha = new Hacha("Hacha" , 5);
+            Hacha.CharactersId(0);
+
+
         }
     }
 }

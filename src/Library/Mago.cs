@@ -10,30 +10,23 @@ namespace Library
 
     public class Mago
     {
-        public Mago(string nickname, int lives, int damage, string power)
+        public Mago(int id, string nombre, int vida, int danio)
         {
-            this.Nickname = nickname;
-            this.Life = lives;
-            this.Damage = damage;
-            this.Power = power;
+            this.Id = id;
+            this.Nombre = nombre;
+            this.Vida = vida;
+            this.Danio = danio;
         }
+        public int Id { get; }
+        public string Nombre { get; }
 
-        public string Nickname { get; }
+        public int Vida { get; private set; }
 
-        public int Life { get; private set; }
-
-        public int Damage { get; }
-
-        public string Power { get; }
-
-        public void Attack(int liveEnemy)
-        {
-            enemy.Life = enemy.Life - this.Damage;
-        }
+        public int Danio { get; }
 
         public bool Healthy()
         {
-            return this.Life > 0;
+            return this.Vida > 0;
         }
     }
 }
