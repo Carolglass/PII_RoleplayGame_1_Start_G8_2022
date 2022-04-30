@@ -34,7 +34,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             }
             set
             {
-                vidaTotal = this.vida;
+                this.vida = value;
             }
         }
 

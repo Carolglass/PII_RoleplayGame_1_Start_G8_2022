@@ -7,54 +7,69 @@ namespace PII_RoleplayGame_1_Start_G8_2022
 {
     class Program
     {
-        static int sleepTime = 1000;
+        static int sleepTime = 3000;
         static void Main(string[] args)
         {
-            Console.WriteLine("------------------INICIO DE LA BATTALLA------------------");
+            Console.WriteLine("\n--------------------LAS CRIATURAS SE PRESENTAN A LA ARENA--------------------\n");
             Thread.Sleep(sleepTime);
 
             Mago Tony = new Mago(0, "Tony", 100, 10);
-            Console.WriteLine("El mago " + Tony.Nombre + "  entra al juego.");
+            Console.WriteLine("El Mago " + Tony.Nombre + " se presenta para luchar en la arena.");
             Thread.Sleep(sleepTime);
 
 
             Elfo Ernesto = new Elfo(1, "Ernesto", 100, 12);
-            Console.WriteLine("El Elfo " + Ernesto.Nombre + "  entra al juego.");
+            Console.WriteLine("El Elfo " + Ernesto.Nombre + " se presenta para luchar en la arena.\n");
             Thread.Sleep(sleepTime);
 
-            Console.WriteLine("------------------HERRERIA------------------");
+            Console.WriteLine("--------------------------HERRERIA--------------------------\n");
+            Thread.Sleep(sleepTime);
+            Console.WriteLine("---------------------Herramienta 1--------------------------");
             Console.WriteLine("Forjando hacha...");
             Thread.Sleep(sleepTime);
             Hacha hacha = new Hacha("Hacha" , 5);
-            Console.WriteLine("Hacha forjado.");
+            Console.WriteLine("Hacha forjado.\n");
             Thread.Sleep(sleepTime);
 
+            Console.WriteLine("---------------------Herramienta 2--------------------------");
+            Thread.Sleep(sleepTime);
             Console.WriteLine("Forjando pico...");
             Thread.Sleep(sleepTime);
             Pico pico = new Pico("Pico", 3);
-            Console.WriteLine("Pico forjado.");
+            Console.WriteLine("Pico forjado.\n");
             Thread.Sleep(sleepTime);
 
-            Console.WriteLine("------------------CORRAN A BUSCAR ARMAS!!!------------------");
-            Console.WriteLine("El mago " + Tony.Nombre + " agarra el hacha.");
+            Console.WriteLine("------------------CORRAN A BUSCAR ARMAS!!!------------------\n");
+            Thread.Sleep(sleepTime);
+            Console.WriteLine("El mago  " + Tony.Nombre + " corre con todas sus fuerzas y logra agarra un hacha para defenderse de la otras criaturas.");
             Hacha.CharactersId(0);
             Thread.Sleep(sleepTime);
+            Thread.Sleep(sleepTime);
             Tony.Danio = Tony.Danio + hacha.ValorAtaque; //El Mago Toni carga su Hacha para el ataque
-            Console.WriteLine("El daño de el Mago ha aumentado a " + Tony.Danio);
+            Console.WriteLine("El daño de " + Tony.Nombre + " ha aumentado a la asombrosa cifra de " + Tony.Danio + "!");
+            Console.WriteLine("Pero...sera suficiente para acabar con el Elfo todo poderoso " + Ernesto.Nombre + " ? \n");
+            Thread.Sleep(sleepTime);
             Thread.Sleep(sleepTime);
 
             Ernesto.Danio = Ernesto.Danio + pico.ValorAtaque; //El Elfo Ernesto carga su pico para el ataque
             Pico.CharactersId(1);
-            Console.WriteLine("El elfo " + Ernesto.Nombre + " agarra el pico.");
+            Console.WriteLine("El elfo " + Ernesto.Nombre + " se deliza por abajo de Tony y mialgrosamente consigue un pico para defenderse.");
+            Thread.Sleep(sleepTime);
             Thread.Sleep(sleepTime);
 
-            Console.WriteLine("El daño de el Elfo ha aumentado a " + Ernesto.Danio);
+            Console.WriteLine("El daño de el Elfo " + Ernesto.Nombre + " ha aumentado a " + Ernesto.Danio);
+            Console.WriteLine("Ahora " + Ernesto.Nombre + " tiene la posibilidad de vencer a " + Tony.Nombre + "\n" );
             Thread.Sleep(sleepTime);
-            Console.WriteLine("Inicio de la promera batalla");
             Thread.Sleep(sleepTime);
-            
-            Ernesto.RecibirDanio(Tony.Danio); //Ernesto es atacado por el mago tony
-            Console.WriteLine("La vida de " + Tony.Nombre + " se redujo a " + Tony.Vida);
+
+            Console.WriteLine("------------------INICIO PRIEMRA BATALLA DE LA ARENA------------------");
+            Thread.Sleep(sleepTime);
+            Console.WriteLine("Ambas criaturas corren para verse de frende y ohhh no! El Elfo " + Ernesto.Nombre + " realiza el primer ataque pero falla.");
+            Console.WriteLine("La contraofensiva comienza");
+            Ernesto.RecibirDanio(Tony.Danio);
+            Thread.Sleep(sleepTime);
+            Console.WriteLine("La vida de " + Ernesto.Nombre + " se redujo a " + Ernesto.Vida + "!");
+            Console.WriteLine("El Mago " + Tony.Nombre + " logró darle un golpe certero!");
             Thread.Sleep(sleepTime);
 
 
