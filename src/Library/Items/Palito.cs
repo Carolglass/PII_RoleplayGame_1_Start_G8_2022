@@ -23,9 +23,6 @@ namespace Library.Items
         public static void CharactersId(int identificador)
         {
             charactersId.Add(identificador);
-
-
-
         }
     }
 }

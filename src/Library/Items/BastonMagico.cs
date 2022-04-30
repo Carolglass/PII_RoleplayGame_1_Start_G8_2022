@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Items
 {
-    internal class BastonMagico
+    public class BastonMagico
     {
         private string nombre;
         private int valorAtaque;
