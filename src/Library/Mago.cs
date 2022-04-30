@@ -27,6 +27,21 @@ namespace Library
         public bool Healthy()
         {
             return this.Vida > 0;
+
         }
+        public void AumentarVida(int VidaAumentada)
+        {
+            this.vida += VidaAumentada;
+        }
+      //  if (Id==1)
+       //     {
+        //      Mago.AumentarVida(Vida)
+         //   }
+	}
+
+	}
+	{
+
+	}
     }
 }
