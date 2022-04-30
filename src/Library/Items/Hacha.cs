@@ -13,13 +13,24 @@ namespace Library.Items
         private static List<int> charactersId = new List<int>();
 
         public String Nombre{ get; private set; }
-        public int ValorAtaque { get; private set; }
+        public int ValorAtaque
+        {
+            get
+            {
+                return this.valorAtaque;
+            }
+            set
+            {
+                this.valorAtaque = value;
+            }
+        }
 
         public Hacha(string nombre, int valorAtaque)
         {
-            Nombre = this.nombre;
-            ValorAtaque = this.valorAtaque;
+            this.Nombre = nombre;
+            this.ValorAtaque = valorAtaque;
         }
+        
         public static void CharactersId(int identificador)
         {
             charactersId.Add(identificador);
