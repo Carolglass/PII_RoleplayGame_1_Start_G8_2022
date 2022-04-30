@@ -46,7 +46,7 @@ namespace Library
         }
 
         //legolas se percibe como una planta y quiere cambiarse el nombre
-        public string DefinirNombre
+        public string DefinirNombre()
         {
             set
             {
