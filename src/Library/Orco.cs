@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
+<<<<<<< Updated upstream
     
     internal class Orco
     {
@@ -39,5 +40,9 @@ namespace Library
         {
             return this.vida > 0;
         }
+=======
+    internal class Orco
+    {
+>>>>>>> Stashed changes
     }
 }
