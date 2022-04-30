@@ -34,7 +34,7 @@ namespace Library
             }
             set
             {
-                vidaTotal = this.vida;
+                this.vida = value;
             }
         }
 
