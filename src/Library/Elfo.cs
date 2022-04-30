@@ -23,8 +23,6 @@ namespace Library
             this.Danio = danio;
         }
 
-        public string Nombre { get; }
-
         public int Vida
         {
             get
@@ -46,13 +44,20 @@ namespace Library
         }
 
         //legolas se percibe como una planta y quiere cambiarse el nombre
-        public string DefinirNombre(string nombresito)
+        public string Nombre
         {
-            this.nombre = nombresito;
+            get
+            {
+                return this.Nombre;
+            }
+            set 
+            {
+                this.Nombre = value;
+            }
         }
 
         //curamos a Legolas del daño que le hizo ella :c
-        public bool Curar()
+        public void Curar()
         {
             this.vida = this.vidaTotal;
         }
