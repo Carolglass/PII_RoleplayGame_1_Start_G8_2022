@@ -8,5 +8,33 @@ namespace Library.Items
 {
     public class Espada
     {
+        private string nombre;
+        private int valorAtaque;
+        private static List<int> charactersId = new List<int>();
+
+        public String Nombre { get; private set; }
+        public int ValorAtaque
+        {
+            get
+            {
+                return this.valorAtaque;
+            }
+            set
+            {
+                this.valorAtaque = value;
+            }
+        }
+
+        public Espada(string nombre, int valorAtaque)
+        {
+            this.Nombre = nombre;
+            this.ValorAtaque = valorAtaque;
+        }
+
+        public static void CharactersId(int identificador)
+        {
+            charactersId.Add(identificador);
+        }
+
     }
 }
