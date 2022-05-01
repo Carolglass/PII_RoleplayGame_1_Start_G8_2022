@@ -6,9 +6,10 @@ namespace PII_RoleplayGame_1_Start_G8_2022
 {
     class Program
     {
-        static int sleepTime = 0;
+        static int sleepTime = 1000;
         static void Main(string[] args)
         {
+
             Console.WriteLine("\n--------------------LAS CRIATURAS SE PRESENTAN A LA ARENA--------------------\n");
             Thread.Sleep(sleepTime);
 

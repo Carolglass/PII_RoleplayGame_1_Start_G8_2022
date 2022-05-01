@@ -18,33 +18,42 @@ namespace PII_RoleplayGame_1_Start_G8_2022
         {
         }
 
-        [Test]
-        public void TestMagoVsEnano()
-        {
-            //Se testea el método de recibir daño de la clase enano
-            //Se testea el método vida para el mago, comprobando que está vivo
-         
-            bool expectedHealth = true;
-            Mago Juan = new Mago(0, "Juan", 4, 3);
-            Enano Matias = new Enano(1, "Matias", 6, 2);
-            Assert.AreEqual(expectedHealth, Juan.Vivo());
-            int expectedDanio = 3;
-            Assert.AreEqual(expectedDanio, Matias.RecibirDanio(Juan.Danio));
-        }
 
         [Test]
         public void TestElfoVsOrco()
         {
             //Se testea el método de recibir daño de la clase Orco
-            //Se testea el método vida para el Elfo, comprobando que está vivo
+            //Se testea el método vida para el Orco, comprobando que está vivo una vez que recibió un ataque
 
-            bool expectedHealth = true;
+            bool expectedVida = true;
             Elfo Juan = new Elfo(0, "Juan", 8, 3);
             Orco Matias = new Orco(1, "Matias", 6, 2);
-            Assert.AreEqual(expectedHealth, Juan.Vivo());
             int expectedDanio = 3;
             Assert.AreEqual(expectedDanio, Matias.RecibirDanio(Juan.Danio));
+            Assert.AreEqual(expectedVida, Matias.Vivo());
+           
         }
+
+        [Test]
+        public void TestMuereOrco()
+        {
+            //Se testea el método de recibir daño de la clase Orco
+            //Se testea el método vida para el Orco, comprobando que está muerto una vez que recibió un ataque
+
+            bool expectedVida = false;
+            Elfo Juan = new Elfo(0, "Juan", 8, 7);
+            Orco Matias = new Orco(1, "Matias", 6, 2);
+            int expectedDanio = -1;
+            Assert.AreEqual(expectedDanio, Matias.RecibirDanio(Juan.Danio));
+            Assert.AreEqual(expectedVida, Matias.Vivo());
+
+        }
+
+
+
+
+
+
 
 
         [Test]
@@ -58,6 +67,15 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             German.RecibirDanio(Kevin.Danio);
             Assert.AreEqual(expectedHealth, German.Vivo());
            
+        }
+
+        [Test]
+        public void MagoVsOrco()
+        {
+            Mago Juan = new Mago(0, "Juan", 6, 4);
+            Orco German = new Orco(1, "German", 7, 2);
+            int VidaExpected = 3;
+            Assert.AreEqual(VidaExpected, German.RecibirDanio(Juan.Danio));
         }
 
    

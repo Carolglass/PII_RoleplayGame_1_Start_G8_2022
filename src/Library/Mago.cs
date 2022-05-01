@@ -38,7 +38,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             }
         }
 
-        public bool Healthy()
+        public bool Vivo()
         {
             return this.Vida > 0;
         }
