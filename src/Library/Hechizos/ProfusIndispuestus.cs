@@ -22,8 +22,7 @@ namespace Library.Hechizos
 
         public int Vida { get; private set; }
 
-   
-        
 
     }
 }
+
