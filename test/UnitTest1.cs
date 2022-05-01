@@ -22,44 +22,128 @@ namespace PII_RoleplayGame_1_Start_G8_2022
         [Test]
         public void TestElfoVsOrco()
         {
-            //Se testea el método de recibir daño de la clase Orco
-            //Se testea el método vida para el Orco, comprobando que está vivo una vez que recibió un ataque
-
-            bool expectedVida = true;
+            //Se testea el método vida para el Orco una vez que fue atacado
+                        
             Elfo Juan = new Elfo(0, "Juan", 8, 3);
             Orco Matias = new Orco(1, "Matias", 6, 3);
             int expectedDanio = 3;
+            
             Matias.RecibirDanio(Juan.Danio);
-            Assert.AreEqual(expectedDanio, Matias.Danio);
-            Assert.AreEqual(expectedVida, Matias.Vida);
+            Assert.AreEqual(expectedDanio, Matias.Vida);
+            
 
         }
 
+        [Test]
+        public void TestOrcoVsElfo()
+        {
+            //Se testea el método vida para Elfo una vez que fue atacado
 
+            Orco Juan = new Orco(0, "Juan", 8, 3);
+            Elfo Matias = new Elfo(1, "Matias", 6, 3);
+            int expectedDanio = 3;
+            Matias.RecibirDanio(Juan.Danio);
+            Assert.AreEqual(expectedDanio, Matias.Vida);
+
+        }
+
+        [Test]
+        public void TestMagoVsEnano()
+        {
+            //Se testea el método vida para Mago una vez que fue atacado
+
+            Mago Juan = new Mago(0, "Juan", 8, 3);
+            Enano Matias = new Enano(1, "Matias", 6, 3);
+            int expectedDanio = 3;
+            Matias.RecibirDanio(Juan.Danio);
+            Assert.AreEqual(expectedDanio, Matias.Vida);
+
+        }
+
+        [Test]
+        public void TestEnanoVsMago()
+        {
+            //Se testea el método vida para Enano una vez que fue atacado
+
+            Enano Juan = new Enano(0, "Juan", 8, 3);
+            Mago Matias = new Mago(1, "Matias", 6, 3);
+            int expectedDanio = 3;
+            Matias.RecibirDanio(Juan.Danio);
+            Assert.AreEqual(expectedDanio, Matias.Vida);
+
+        }
 
 
         [Test]
-        public void TestVidaOrco()
+        public void TestOrcoCurado()
         {
-            //Se testea el método de recibir daño de la clase Orco
-            //Se testea el método vida para el Orco, comprobando que está vivo una vez que recibió un ataque
+            //Se testea el método Curar para el Orco luego de ser atacado
 
-            bool expectedVida = true;
-            Elfo Juan = new Elfo(0, "Juan", 10, 5);
-            Orco Matias = new Orco(1, "Matias", 10, 5);
-            int expectedDanio = 0;
-            Assert.AreEqual(expectedDanio, Matias.Danio);
-            Assert.AreEqual(expectedVida, Matias.Vida);
+            Elfo Juan = new Elfo(0, "Juan", 8, 3);
+            Orco Matias = new Orco(1, "Matias", 6, 3);
+            int expected = 6;
+            Matias.RecibirDanio(Juan.Danio);
+            Matias.Curar();
+            Assert.AreEqual(expected, Matias.Vida);
+
+        }
+
+        [Test]
+        public void TestEnanoCurado()
+        {
+            //Se testea el método Curar para el Enano luego de ser atacado
+
+            Elfo Juan = new Elfo(0, "Juan", 8, 3);
+            Enano Matias = new Enano(1, "Matias", 6, 3);
+            int expected = 6;
+            Matias.RecibirDanio(Juan.Danio);
+            Matias.Curar();
+            Assert.AreEqual(expected, Matias.Vida);
+
+        }
+
+        [Test]
+        public void TestMagoCurado()
+        {
+            //Se testea el método Curar para el Mago luego de ser atacado
+
+            Elfo Juan = new Elfo(0, "Juan", 8, 3);
+            Mago Matias = new Mago(1, "Matias", 6, 3);
+            int expected = 6;
+            Matias.RecibirDanio(Juan.Danio);
+            Matias.Curar();
+            Assert.AreEqual(expected, Matias.Vida);
+
+        }
+
+        [Test]
+        public void TestElfoCurado()
+        {
+            //Se testea el método Curar para el Elfo luego de ser atacado
+
+            Mago Juan = new Mago(0, "Juan", 8, 3);
+            Elfo Matias = new Elfo(1, "Matias", 6, 3);
+            int expected = 6;
+            Matias.RecibirDanio(Juan.Danio);
+            Matias.Curar();
+            Assert.AreEqual(expected, Matias.Vida);
 
         }
 
 
+        
 
+         [Test]
+        public void TestMagoHacha()
+        {
+            //Se testea el nuevo Danio luego de cargar el Hacha
 
-
-
-
-
+            Mago Juan = new Mago(0, "Juan", 8, 3);
+            Hacha hacha = new Hacha("Hacha", 5);
+            int expected = 8;
+            Juan.Danio = Juan.Danio + hacha.ValorAtaque; //El Mago Juan carga su Hacha para el ataque
+            Assert.AreEqual(expected, Juan.Danio);
+        }
 
 
 
