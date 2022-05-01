@@ -15,12 +15,14 @@ namespace Library
         private int vida;
         private int danio;
 
-        public int vidaTotal;
+        public static int vidaTotal;
+
         public Elfo(int id, string nombre, int vida, int danio)
         {
             this.Id = id;
             this.Nombre = nombre;
             this.Vida = vida;
+            vidaTotal = vida;
             this.Danio = danio;
         }
 
@@ -72,7 +74,7 @@ namespace Library
         //curamos a Legolas del daño que le hizo ella :c
         public void Curar()
         {
-            this.vida = this.vidaTotal;
+            this.vida = vidaTotal;
         }
     }
 }

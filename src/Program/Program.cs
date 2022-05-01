@@ -7,7 +7,7 @@ namespace Program
 {
     class Program
     {
-        static int sleepTime = 3000;
+        static int sleepTime = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("\n--------------------LAS CRIATURAS SE PRESENTAN A LA ARENA--------------------\n");
@@ -18,7 +18,7 @@ namespace Program
             Thread.Sleep(sleepTime);
 
 
-            Elfo Ernesto = new Elfo(1, "Ernesto", 100, 12);
+            Elfo Ernesto = new Elfo(1, "Ernesto", 150, 12);
             Console.WriteLine("El Elfo " + Ernesto.Nombre + " se presenta para luchar en la arena.\n");
             Thread.Sleep(sleepTime);
 
@@ -72,8 +72,10 @@ namespace Program
             Console.WriteLine("El Mago " + Tony.Nombre + " logró darle un golpe certero!");
             Thread.Sleep(sleepTime);
 
-
-
+            Console.WriteLine("Los espectadores se sienten conmovidos por Esrnesto");
+            Console.WriteLine("y le regalan una botella de curación!");
+            Ernesto.Curar();
+            Console.WriteLine("Ernesto se curó al " + Ernesto.Vida + "! ");
         }
     }
 }
