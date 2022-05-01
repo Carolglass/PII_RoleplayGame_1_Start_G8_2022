@@ -62,10 +62,14 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             }
         }
 
-        public bool Vivo()
+        public void RecibirDanio(int dañoRecibido)
+        {
+            this.vida = this.vida - dañoRecibido;
+        }
+
+        public void Curar()
         {
             this.vida = vidaTotal;
         }
-
     }
 }

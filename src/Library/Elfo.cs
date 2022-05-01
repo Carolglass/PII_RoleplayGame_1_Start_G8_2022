@@ -71,15 +71,11 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             }
         }
 
-        //curamos a Legolas del daño que le hizo ella :c
+ 
+
         public void Curar()
         {
             this.vida = vidaTotal;
-        }
-
-        public bool Vivo()
-        {
-            return this.Vida > 0;
         }
 
     }
