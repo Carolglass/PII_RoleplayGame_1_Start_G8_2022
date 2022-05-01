@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Hechizos
+namespace PII_RoleplayGame_1_Start_G8_2022
 {
-    internal class ParcialitusSorpresivus
+    public class ParcialitusSorpresivus
     {
         private string nombre;
         private int vida;
@@ -14,7 +14,7 @@ namespace Library.Hechizos
 
  
 
-        public ParcialitusSorpresivus(int id, string nombre, int vida, int danio)
+        public ParcialitusSorpresivus(int id, string nombre, int danio)
         {
             this.Id = id;
             this.Nombre = nombre;
