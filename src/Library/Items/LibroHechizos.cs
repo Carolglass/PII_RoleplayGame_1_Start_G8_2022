@@ -16,7 +16,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
 
         public LibroHechizos(string nombre)
         {
-            Nombre = this.nombre;//hola
+            Nombre = this.nombre;
         }
         public void AñadirHechizosVida(int curacion)
         {
