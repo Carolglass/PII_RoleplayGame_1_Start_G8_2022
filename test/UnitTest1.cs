@@ -19,12 +19,53 @@ namespace PII_RoleplayGame_1_Start_G8_2022
         }
 
         [Test]
-        public void Test1()
+        public void TestMagoVsEnano()
         {
-            bool expected = true;
-            Mago magoPrueba = new Mago(0, "MagoPrueba", 4, 3);
-            Assert.AreEqual(expected, magoPrueba.Healthy());
+            //Se testea el método de recibir daño de la clase enano
+            //Se testea el método vida para el mago, comprobando que está vivo
+         
+            bool expectedHealth = true;
+            Mago Juan = new Mago(0, "Juan", 4, 3);
+            Enano Matias = new Enano(1, "Matias", 6, 2);
+            Assert.AreEqual(expectedHealth, Juan.Vivo());
+            int expectedDanio = 3;
+            Assert.AreEqual(expectedDanio, Matias.RecibirDanio(Juan.Danio));
         }
+
+        [Test]
+        public void TestElfoVsOrco()
+        {
+            //Se testea el método de recibir daño de la clase Orco
+            //Se testea el método vida para el Elfo, comprobando que está vivo
+
+            bool expectedHealth = true;
+            Elfo Juan = new Elfo(0, "Juan", 8, 3);
+            Orco Matias = new Orco(1, "Matias", 6, 2);
+            Assert.AreEqual(expectedHealth, Juan.Vivo());
+            int expectedDanio = 3;
+            Assert.AreEqual(expectedDanio, Matias.RecibirDanio(Juan.Danio));
+        }
+
+
+        [Test]
+        public void TestMuerte()
+        //Este test sirve para verificar que cuando el valor de vida del orco es menor que 0 es porque murió y 
+        //que el hacer daño del enano funciona
+        {
+            bool expectedHealth = false;
+            Elfo Kevin = new Elfo(0, "Kevin", 6, 7);
+            Orco German = new Orco(1, "German", 6, 2);
+            German.RecibirDanio(Kevin.Danio);
+            Assert.AreEqual(expectedHealth, German.Vivo());
+           
+        }
+
+   
+
+
+
+
+
 
 
     }
