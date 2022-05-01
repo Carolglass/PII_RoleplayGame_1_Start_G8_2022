@@ -9,26 +9,27 @@ namespace PII_RoleplayGame_1_Start_G8_2022
     public class LibroHechizos
     {
         private string nombre;
-
-        private static List<int> charactersId = new List<int>();
-
-        private static List<int> hechizosId = new List<int>();
+        List<int> daños = new List<int>();
+        List<int> curacion = new List<int>();
 
         public String Nombre { get; private set; }
 
-
-        public LibroHechizos(string nombre, int valorAtaque)
+        public LibroHechizos(string nombre)
         {
             Nombre = this.nombre;//hola
+        }
+        public void AñadirHechizosVida(int curacion)
+        {
+            this.curacion.Add(curacion);
+        }
+        public void AñadirHechizosDaño(int daño)
+        {
+            this.daños.Add(daño);
+        }
 
-        }
-        public static void CharactersId(int identificador)
+        public List<int> Daños
         {
-            charactersId.Add(identificador);
-        }
-        public static void HechizosId(int identificadorHechizo)
-        {
-            hechizosId.Add(identificadorHechizo);
+            get { return this.daños; }
         }
     }
 }

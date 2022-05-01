@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Library.Hechizos
 {
-    internal class ProfusIndispuestus
+    public class ProfusIndispuestus
     {
         private string nombre;
         private int vida;
-
-
-
         public ProfusIndispuestus(int id, string nombre, int vida, int danio)
         {
             this.Id = id;
@@ -26,7 +23,7 @@ namespace Library.Hechizos
         public int Vida { get; private set; }
 
    
-        }
+        
 
     }
 }
