@@ -38,6 +38,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             }
         }
 
+
         public int Vida
         {
             get
@@ -50,6 +51,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             }
         }
 
+
         public int Danio
         {
             get
@@ -61,6 +63,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
                 this.danio = value;
             }
         }
+
 
 
         public void RecibirDanio(int dañoRecibido)

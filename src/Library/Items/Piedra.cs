@@ -30,6 +30,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             this.Nombre = nombre;
             this.ValorAtaque = valorAtaque;
         }
+
         public static void CharactersId(int identificador)
         {
             charactersId.Add(identificador);
