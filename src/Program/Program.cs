@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading;
 using Library;
-using Library.Items;
 
 namespace PII_RoleplayGame_1_Start_G8_2022
 {
@@ -38,6 +37,28 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             Pico pico = new Pico("Pico", 3);
             Console.WriteLine("Pico forjado.\n");
             Thread.Sleep(sleepTime);
+
+            Console.WriteLine("--------------------------CALIZ--------------------------\n");
+            Thread.Sleep(sleepTime);
+            Console.WriteLine("---------------------Hechizo 1--------------------------");
+            Console.WriteLine("Mezclando ingredientes...");
+            Thread.Sleep(sleepTime);
+            ParcialitusSorpresivus Hechizo1 = new ParcialitusSorpresivus(3,"Hechizo1",20);
+            Console.WriteLine("hehcizo realizado\n");
+            Thread.Sleep(sleepTime);
+
+            Console.WriteLine("--------------------------Creacion libro--------------------------\n");
+            Thread.Sleep(sleepTime);
+            Console.WriteLine("---------------------Hechizo 1--------------------------");
+            Console.WriteLine("Realizando conjuros...boooooom!!!");
+            Thread.Sleep(sleepTime);
+            LibroHechizos book = new LibroHechizos("Spartacus");
+            Console.WriteLine("hehcizo realizado\n");
+            Thread.Sleep(sleepTime);
+
+
+            //---------------------------------------------------------
+            book.AñadirHechizosDaño(Hechizo1.Danio);
 
             Console.WriteLine("------------------CORRAN A BUSCAR ARMAS!!!------------------\n");
             Thread.Sleep(sleepTime);
@@ -76,6 +97,15 @@ namespace PII_RoleplayGame_1_Start_G8_2022
             Console.WriteLine("y le regalan una botella de curación!");
             Ernesto.Curar();
             Console.WriteLine("Ernesto se curó al " + Ernesto.Vida + "! ");
+
+
+            //Prepara ataque
+            Tony.Danio = Tony.Danio + book.Daños[0];
+            Ernesto.RecibirDanio(Tony.Danio);
+            Thread.Sleep(sleepTime);
+
+
+            Console.WriteLine("La vida de " + Ernesto.Nombre + " se redujo a " + Ernesto.Vida + "!");
         }
     }
 }
