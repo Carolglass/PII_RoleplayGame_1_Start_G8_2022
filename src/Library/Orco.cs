@@ -24,7 +24,7 @@ namespace PII_RoleplayGame_1_Start_G8_2022
 
         public string Nombre { get; }
 
-        public int Vida { get; private set; }
+        public int Vida { get; set; }
 
         public int Danio
         {
@@ -39,14 +39,15 @@ namespace PII_RoleplayGame_1_Start_G8_2022
         }
 
 
-        public void RecibirDanio(int daniorecibido)
+        public int RecibirDanio(int daniorecibido)
         {
-            this.vida -= daniorecibido;
+            this.Vida -= daniorecibido;
+            return this.Vida;
         }
 
         public bool Vivo()
         {
-            return this.vida > 0;
+            return this.Vida > 0;
         }
     }
 }
