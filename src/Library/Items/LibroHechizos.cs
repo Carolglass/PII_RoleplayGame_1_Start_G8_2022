@@ -6,22 +6,29 @@ using System.Threading.Tasks;
 
 namespace PII_RoleplayGame_1_Start_G8_2022
 {
-    internal class Escudo
+    public class LibroHechizos
     {
         private string nombre;
-        private int valorDefensa;
-        private static List<int> charactersId = new List<int>();
-        public String Nombre { get; private set; }
-        public int ValorDefensa { get; private set; }
 
-        public Escudo(string nombre, int valorAtaque)
+        private static List<int> charactersId = new List<int>();
+
+        private static List<int> hechizosId = new List<int>();
+
+        public String Nombre { get; private set; }
+
+
+        public LibroHechizos(string nombre, int valorAtaque)
         {
-            this.Nombre = nombre;
-            this.ValorDefensa = valorDefensa;
+            Nombre = this.nombre;//hola
+
         }
         public static void CharactersId(int identificador)
         {
             charactersId.Add(identificador);
+        }
+        public static void HechizosId(int identificadorHechizo)
+        {
+            hechizosId.Add(identificadorHechizo);
         }
     }
 }

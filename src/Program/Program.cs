@@ -3,7 +3,7 @@ using System.Threading;
 using Library;
 using Library.Items;
 
-namespace Program
+namespace PII_RoleplayGame_1_Start_G8_2022
 {
     class Program
     {

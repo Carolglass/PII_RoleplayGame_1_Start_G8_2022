@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Items
+namespace PII_RoleplayGame_1_Start_G8_2022
 {
     public class BastonMagico
     {
